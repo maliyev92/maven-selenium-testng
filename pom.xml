@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>io.yoll</groupId>
+    <artifactId>maven-selenium-testng</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+<!--    properties are just like variables where we can set a value and reuse it in different places-->
+    <properties>
+        <maven.compiler.source>20</maven.compiler.source>
+        <maven.compiler.target>20</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <selenium.java.version>4.19.1</selenium.java.version>
+    </properties>
+
+<!--    When you want to install a new tool to your project'-->
+<!--    You simply add a dependency to you dependencies tag -->
+<!--    A dependency is an additional tool that we want to add to our toolbox/framework/project-->
+<!--    All it takes now to install a new tool is to add it to the pom xml-->
+    <dependencies>
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+<!--            Here we are using a property defined in properties for selenium version-->
+            <version>${selenium.java.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>7.9.0</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-slf4j-impl</artifactId>
+            <version>2.23.1</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+
+
+</project>
