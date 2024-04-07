@@ -46,7 +46,7 @@ public class AssertionTest {
             Assert.fail("The data base connection not successful.");
         }
         // Maturate a sql query that retrieves some data
-        // code
+        // Note
     }
 
     @Test
@@ -60,7 +60,4 @@ public class AssertionTest {
         }
         // code that uses the file
     }
-
-
-
 }
