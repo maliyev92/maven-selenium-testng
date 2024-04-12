@@ -25,7 +25,7 @@
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
 <!--            Here we are using a property defined in properties for selenium version-->
-            <version>${selenium.java.version}</version>
+            <version>4.19.1</version>
         </dependency>
         <dependency>
             <groupId>org.testng</groupId>
