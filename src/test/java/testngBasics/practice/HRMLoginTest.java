@@ -5,9 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
 public class HRMLoginTest {
 
@@ -33,8 +31,18 @@ public class HRMLoginTest {
         driver.quit();
     }
 
+    @BeforeClass
+    public void dbConnectionSetup(){
+        System.out.println("--- LOGGER: Connection to data base opened....");
+    }
 
-    @Test
+    @AfterClass
+    public void dbCleanUp(){
+        System.out.println("--- LOGGER: Connection to data base closed.");
+    }
+
+
+    @Test(priority = 0)
     public void testSuccessfulLoginDisplaysUsername(){
         login("yoll-student", "Bootcamp5#");
         /* Locate and verify the welcome message */
@@ -45,7 +53,17 @@ public class HRMLoginTest {
         Assert.assertEquals(actualWelcomeMessage,expectedWelcomeMessage,"Welcome message verification failed!");
     }
 
-    @Test
+    /*
+    * Options to disable a test
+    * - comment out (usually we do not want to push commented cod to remote repo!)
+    * - remove the test (not recommended)
+    * - we can add properties/parameters to the Test annotation itself
+    * */
+    @Test(
+            enabled = true,
+            description = "This test is WIP and has to be disabled",
+            priority = 1
+    )
     public void testLoginWithInvalidCredentials(){
         login("invalid", "invalid");
         /* Locate the error message and verify it is as expected */
@@ -56,8 +74,7 @@ public class HRMLoginTest {
         Assert.assertEquals(actualErrorMessage, expectedErrorMessage, "Error message verification failed!");
     }
 
-
-    @Test
+    @Test(priority = 3)
     public void testUserCanLogOut() throws InterruptedException {
         login("yoll-student", "Bootcamp5#");
         /*
