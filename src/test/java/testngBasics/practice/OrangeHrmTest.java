@@ -40,4 +40,36 @@ public class OrangeHrmTest {
         driver.quit();
     }
 
+    /*
+    * Navigate to OrangeHRM Login page
+    * Login with valid credentials
+    * Once redirected verify that current url ends with /dashboard
+    *
+    * Given User navigates to Login Page
+    * When User logs in with valid credentials
+    * Then User is redirected to Dashboard with url ending /dashboard
+    * */
+    @Test
+    public void verifyUrlAfterSuccessfulLogin(){
+        // Set Up
+        WebDriver driver = new ChromeDriver();
+        driver.get("http://dev-hrm.yoll.io/index.php/auth/login");
+        // When User logs in with valid credentials
+        // Locate the elements as username, password and login button
+        WebElement userNameInput = driver.findElement(By.name("txtUsername"));
+        WebElement passwordInput = driver.findElement(By.id("txtPassword"));
+        WebElement loginButton = driver.findElement(By.id("btnLogin"));
+        userNameInput.sendKeys("yoll-student");
+        passwordInput.sendKeys("Bootcamp5#");
+        loginButton.click();
+        String expectedEndpoint = "/dashboard";
+        String actualUrl = driver.getCurrentUrl(); // http://dev-hrm.yoll.io/index.php/dashboard
+        boolean endpointAsExpected = actualUrl.endsWith(expectedEndpoint);
+        Assert.assertTrue(endpointAsExpected, "The Endpoint verification failed!");
+        driver.quit();
+    }
+
+
+
+
 }
