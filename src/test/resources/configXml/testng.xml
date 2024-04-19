@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<!--TestNG xml needs to start with suite tag - it is the root tag-->
+<suite name="My First Suite In TestNG">
+<!--    A suite can contain one or more tests, and a test is a collection of test cases that test a specific functionality e.g: Login, Logout, Dashboard-->
+<!--    Next we need to create a test tag, do not confuse the test in xml with annotation @Test-->
+    <test name="My First Test In TestNG">
+<!--        Inside of the test we can run multiple things: packages, classes, methods, groups-->
+<!--        When we provide the path of the package, class etc... we always start from java folder-->
+        <packages>
+            <package name="testngBasics.practice"/>
+        </packages>
+    </test>
+</suite>
