@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Exclude Methods Suite">
+    <test name="Exclude Methods Test">
+        <classes>
+            <class name="testngBasics.practice.PriorityTest">
+                <methods>
+                    <exclude name="modifyUser"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

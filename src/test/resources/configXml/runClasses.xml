@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="HRM Suite">
+    <test name="Orange HRM Test">
+        <classes>
+<!--            <class name="testngBasics.practice.HRMLoginTest"/>-->
+<!--            <class name="testngBasics.practice.PriorityTest"/>-->
+<!--            <class name="testngBasics.practice.OrangeHrmTest"/>-->
+            <class name="testngBasics.practice.CheckAnnotationAndOrderTest">
+                <methods>
+                    <exclude name="testMethod2"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
+
+<!--MAC - Command + S -->
+<!--WIN - Ctrl + S-->
