@@ -10,10 +10,9 @@
 
 <!--    properties are just like variables where we can set a value and reuse it in different places-->
     <properties>
-        <maven.compiler.source>20</maven.compiler.source>
-        <maven.compiler.target>20</maven.compiler.target>
+        <maven.compiler.source>21</maven.compiler.source>
+        <maven.compiler.target>21</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <selenium.java.version>4.19.1</selenium.java.version>
     </properties>
 
 <!--    When you want to install a new tool to your project'-->

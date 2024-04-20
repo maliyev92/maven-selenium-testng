@@ -39,7 +39,6 @@ public class CheckAnnotationAndOrderTest {
     @Test(priority = -1)
     public void testMethod2(){
         System.out.println("----- Test method 2 executed");
-        Assert.fail();
     }
 
     @Test(priority = 1)
