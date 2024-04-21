@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="Regression Suite">
+    <test name="Regression Test">
+
+        <!--        When you want to run the grouped test cases include groups tag-->
+        <!--        Later define run tag and inside you can specify groups to include or exclude-->
+        <groups>
+            <run>
+                <include name="regression"/>
+            </run>
+        </groups>
+
+        <!--        Source of the test case-->
+        <!--        You need to define where testng will take the tests from-->
+        <!--        Usually it have a large scope-->
+        <packages>
+            <package name="testngBasics.practice"/>
+            <package name="testngBasics.intro"/>
+        </packages>
+    </test>
+</suite>
