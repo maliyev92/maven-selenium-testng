@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<!--In testng xml the order of execution is defined by order you place them-->
+<!--this is done by attribute preserve-order="true" which is tru by default, if yo want to disregard the order in xml change to false -->
+<suite name="Order of execution" preserve-order="true">
+    <test name="Order test">
+        <classes>
+            <class name="testngBasics.practice.GroupingPracticeTwoTest"/>
+            <class name="testngBasics.practice.GroupingPracticeOneTest"/>
+        </classes>
+    </test>
+</suite>
