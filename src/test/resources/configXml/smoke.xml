@@ -1,0 +1,22 @@
+<suite name="Smoke Suite">
+    <test name="Smoke Test">
+        <!--        define group-->
+        <groups>
+            <define name="smoke"/>
+            <run>
+                <include name="smoke"/>
+            </run>
+        </groups>
+
+        <!--        Source-->
+        <packages>
+            <package name="testngBasics.practice"/>
+            <package name="testngBasics.intro"/>
+        </packages>
+    </test>
+</suite>
+
+
+
+
+
